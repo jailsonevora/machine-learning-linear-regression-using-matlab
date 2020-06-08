@@ -1,7 +1,5 @@
-classdef housePriceObject
-    %HOUSEPRICE Summary of this class goes here
-    %   Detailed explanation goes here
-    
+classdef LinearRegressionObject
+    %   Detailed explanation goes here    
     properties
         data
         X 
@@ -17,7 +15,7 @@ classdef housePriceObject
     
     methods(Access = public, Static = true)
         
-%         function obj = housePrice(data,X,y,theta,alpha,num_iters,m,iterations,mu,sigma)
+%         function obj = LinearRegressionObject(data,X,y,theta,alpha,num_iters,m,iterations,mu,sigma)
 %             %UNTITLED Construct an instance of this class
 %             %   Detailed explanation goes here
 %             obj.data = data;
@@ -39,8 +37,7 @@ classdef housePriceObject
             xlabel('Population of City in 10,000s'); % Set the x-axis label
         end
         
-        function J = computeCost(X, y, theta)  
-        % Vetorize
+        function J = computeCost(X, y, theta) 
             J = 1/(2*this.m) * sum((X*theta - y).^2);
         end
         
